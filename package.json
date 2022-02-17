@@ -1,7 +1,7 @@
 {
-  "name": "sedona-22",
+  "name": "portfolio-ak",
   "private": true,
-  "description": "Личный проект «Седона» от HTML Academy",
+  "description": "Портфолио Антона Кияна",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",

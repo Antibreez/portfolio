@@ -102,44 +102,83 @@ $(window).on("load", function () {
       "label2"
     );
 
-  gsap.from(".about__text-block", {
-    scrollTrigger: ".about__text-block",
-    x: -500,
-    opacity: 0,
-    duration: 1,
-  });
-
-  gsap.from(".about__img-block", {
-    scrollTrigger: ".about__img-block",
-    x: 500,
-    opacity: 0,
-    duration: 1,
-  });
-
-  gsap.from(".portfolio__list-item", {
-    scrollTrigger: ".portfolio__list-item",
-    y: 500,
-    opacity: 0,
-    duration: 1,
-    stagger: {
-      amount: 0.4,
+  gsap.fromTo(
+    ".about__text-block",
+    {
+      x: -500,
+      opacity: 0,
     },
-  });
+    {
+      scrollTrigger: ".about__text-block",
+      x: 0,
+      opacity: 1,
+      duration: 1,
+    }
+  );
 
-  gsap.from(".skills__item", {
-    scrollTrigger: ".skills__item",
-    x: -500,
-    opacity: 0,
-    duration: 1,
-    stagger: {
-      amount: 0.4,
+  gsap.fromTo(
+    ".about__img-block",
+    {
+      y: 0,
+      x: 500,
+      opacity: 0,
     },
+    {
+      y: "-50%",
+      x: 0,
+      scrollTrigger: ".about__img-block",
+      opacity: 1,
+      duration: 1,
+    }
+  );
+
+  const portfolioItems = gsap.utils.toArray(".portfolio__list-item");
+
+  portfolioItems.forEach(function (item) {
+    gsap.fromTo(
+      item,
+      {
+        y: 300,
+        opacity: 0,
+      },
+      {
+        scrollTrigger: item,
+        y: 0,
+        opacity: 1,
+        duration: 1,
+      }
+    );
   });
 
-  gsap.from(".skills__bg-img-block", {
-    scrollTrigger: ".skills__bg-img-block",
-    x: 500,
-    opacity: 0,
-    duration: 1,
+  const skillItem = gsap.utils.toArray(".skills__item");
+
+  skillItem.forEach(function (item) {
+    gsap.fromTo(
+      item,
+      {
+        x: -500,
+        opacity: 0,
+      },
+      {
+        scrollTrigger: item,
+        x: 0,
+        opacity: 1,
+        duration: 1,
+      }
+    );
   });
+
+  gsap.fromTo(
+    ".skills__bg-img-block",
+    {
+      x: 500,
+      opacity: 0,
+    },
+    {
+      scrollTrigger: ".skills__bg-img-block",
+      x: 0,
+      opacity: 1,
+      duration: 1,
+    }
+  );
 });

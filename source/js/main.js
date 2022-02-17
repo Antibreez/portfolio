@@ -4,3 +4,4 @@ import "./scroll";
 import "./animations";
 import "./portfolio";
 import "./menu";
+import "./preloader";
