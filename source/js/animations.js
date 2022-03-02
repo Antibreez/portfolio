@@ -13,7 +13,7 @@ $(window).on("load", function () {
       smooth: true,
     },
     smartphone: {
-      smooth: true,
+      smooth: false,
     },
   });
 
