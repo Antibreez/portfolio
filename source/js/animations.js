@@ -214,7 +214,7 @@ $(window).on("load", function () {
     if (typeof args.currentElements["about-title-bar-long"] === "object") {
       let progress = args.currentElements["about-title-bar-long"].progress;
 
-      let x = $(window).width() < 768 ? 80 : 45;
+      let x = $(window).width() < 768 ? 100 : 55;
       $(item2.el).css("width", `${progress * x}%`);
     }
 
@@ -247,7 +247,7 @@ $(window).on("load", function () {
     if (typeof args.currentElements["skills-title-bar-long"] === "object") {
       let progress = args.currentElements["skills-title-bar-long"].progress;
 
-      let x = $(window).width() < 768 ? 80 : 45;
+      let x = $(window).width() < 768 ? 100 : 55;
       $(item5.el).css("width", `${progress * x}%`);
     }
   });
