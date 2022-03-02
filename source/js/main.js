@@ -1,7 +1,8 @@
 // import $ from "jquery";
 import "./resize";
-import "./scroll";
 import "./animations";
+import "./scroll";
 import "./portfolio";
 import "./menu";
 import "./preloader";
+import "./btn-to-top";

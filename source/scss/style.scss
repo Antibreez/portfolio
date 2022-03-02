@@ -1,5 +1,6 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/swiper/swiper-bundle";
+@import "../../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
 //Global
 @import "global/variables.scss";
@@ -7,6 +8,5 @@
 @import "global/fonts.scss";
 @import "global/global.scss";
 
-
 // Blocks
-@import "blocks/*.scss"
+@import "blocks/*.scss";

@@ -1,18 +1,22 @@
 .skills {
-  padding: 90px 0;
+  padding: 30px 0 90px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .skills__container {
   position: relative;
 }
 
-.skills__bg-img-block {
+.skills__bg-container {
   position: absolute;
-  top: 100px;
+  top: 150px;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.skills__bg-img-block {
   display: flex;
   justify-content: flex-end;
   padding: 0 40px;
@@ -22,6 +26,7 @@
 .skills__bg-img-container {
   width: 90%;
   max-width: 400px;
+  transform-origin: center;
 
   img {
     width: 100%;
@@ -29,23 +34,53 @@
   }
 }
 
+.skills__title-block {
+  position: relative;
+  margin: 0 0 40px;
+  padding: 20px 0;
+}
+
 .skills__title {
-  margin: 0 0 50px;
+  position: relative;
+  margin: 0;
   font-weight: 600;
   font-size: 32px;
   line-height: 36px;
-  color: $primary;
+  z-index: 3;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.skills__title-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #000;
+  z-index: 2;
+}
+
+.skills__title-bar-long {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  height: 120%;
+  width: 0;
+  background-color: rgba(90, 24, 154, 1);
+  z-index: 1;
 }
 
 .skills__sections-block {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  //flex-direction: column;
   z-index: 2;
 }
 
 .skills__section {
-  margin: 0 0 20px;
+  margin: 0 0 30px;
   flex-shrink: 0;
   width: calc((100% - 30px) / 2);
   max-width: 500px;
@@ -58,12 +93,12 @@
 .skills__subtitle {
   display: inline-block;
   margin: 0 0 10px;
-  padding: 5px 10px;
+  padding: 0;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: $primary;
-  background-color: rgba(90, 24, 154, 0.1);
+  //background-color: rgba(90, 24, 154, 0.1);
   border-radius: 5px;
 }
 
@@ -101,13 +136,12 @@
 
 @include mobile {
   .skills {
-    padding: 50px 0;
+    padding: 30px 0 50px;
   }
 
   .skills__title {
     font-size: 24px;
     line-height: 30px;
-    margin: 0 0 25px;
   }
 
   .skills__section {
@@ -124,8 +158,8 @@
     line-height: 20px;
   }
 
-  .skills__bg-img-block {
-    top: 50px;
+  .skills__bg-container {
+    top: 150px;
   }
 
   .skills__bg-img-container {
