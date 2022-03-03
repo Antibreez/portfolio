@@ -1,29 +1,12 @@
 import gsap from "gsap";
 import scrollTrigger from "gsap/ScrollTrigger";
-import locomotiveScroll from "locomotive-scroll";
+
+import lScroll from "./locomotivescroll";
 
 gsap.registerPlugin(scrollTrigger);
 
-const $btn = $(".btn-to-top");
-
 $(window).on("load", function () {
-  const lScroll = new locomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    lerp: 0.1,
-    tablet: {
-      smooth: true,
-    },
-    smartphone: {
-      smooth: false,
-    },
-  });
-
-  const tl = gsap.timeline({
-    onComplete: () => {
-      //$("body").css("overflow", "");
-    },
-  });
+  const tl = gsap.timeline();
 
   tl.from(".header", 1, {
     opacity: 0,
@@ -133,17 +116,6 @@ $(window).on("load", function () {
   };
 
   lScroll.on("scroll", (args) => {
-    const dist = args.scroll.y;
-    console.log(dist > $(window).height());
-
-    if (dist > $(window).height() && !$btn.hasClass("shown")) {
-      $btn.addClass("shown");
-    }
-
-    if (dist < $(window).height() && $btn.hasClass("shown")) {
-      $btn.removeClass("shown");
-    }
-
     setBarStyles(args, "about-title-bar", 60, 25);
     setBarStyles(args, "about-title-bar-long", 100, 55);
     setBarStyles(args, "skills-title-bar", 60, 25);

@@ -1,5 +1,10 @@
-import SmoothScroll from "smooth-scroll";
+import lScroll from "./locomotivescroll";
 
-const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 200,
+$('a[href*="#"').on("click", function (e) {
+  e.preventDefault();
+
+  const target = e.currentTarget;
+  const name = $(target).attr("href");
+
+  lScroll.scrollTo(document.querySelector(name));
 });
