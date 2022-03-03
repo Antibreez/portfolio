@@ -1319,6 +1319,98 @@ body {
   .btn-to-top:hover {
     cursor: pointer; }
 
+@-webkit-keyframes wave {
+  0%,
+  100% {
+    -webkit-transform: rotate(10deg) translate(-10px, 25px);
+            transform: rotate(10deg) translate(-10px, 25px); }
+  30%,
+  70% {
+    -webkit-transform: rotate(10deg) translate(-10px, 25px);
+            transform: rotate(10deg) translate(-10px, 25px); }
+  40%,
+  60% {
+    -webkit-transform: rotate(5deg) translate(-10px, 20px);
+            transform: rotate(5deg) translate(-10px, 20px); }
+  50% {
+    -webkit-transform: rotate(10deg) translate(-10px, 25px);
+            transform: rotate(10deg) translate(-10px, 25px); } }
+
+@keyframes wave {
+  0%,
+  100% {
+    -webkit-transform: rotate(10deg) translate(-10px, 25px);
+            transform: rotate(10deg) translate(-10px, 25px); }
+  30%,
+  70% {
+    -webkit-transform: rotate(10deg) translate(-10px, 25px);
+            transform: rotate(10deg) translate(-10px, 25px); }
+  40%,
+  60% {
+    -webkit-transform: rotate(5deg) translate(-10px, 20px);
+            transform: rotate(5deg) translate(-10px, 20px); }
+  50% {
+    -webkit-transform: rotate(10deg) translate(-10px, 25px);
+            transform: rotate(10deg) translate(-10px, 25px); } }
+
+@-webkit-keyframes show {
+  0%,
+  100% {
+    -webkit-transform: rotate(10deg) translate(10px, 25px) scale(0.7);
+            transform: rotate(10deg) translate(10px, 25px) scale(0.7);
+    z-index: 0; }
+  10%,
+  90% {
+    -webkit-transform: rotate(10deg) translate(10px, 25px) scale(0.7);
+            transform: rotate(10deg) translate(10px, 25px) scale(0.7);
+    z-index: 0; }
+  20%,
+  80% {
+    -webkit-transform: rotate(0) translate(20px, -80px) scale(0.7);
+            transform: rotate(0) translate(20px, -80px) scale(0.7);
+    z-index: 0; }
+  30%,
+  70% {
+    -webkit-transform: rotate(0) translate(0, -60px) scale(1);
+            transform: rotate(0) translate(0, -60px) scale(1);
+    z-index: 2; }
+  40%,
+  60% {
+    -webkit-transform: rotate(0) translate(0, 20px) scale(1);
+            transform: rotate(0) translate(0, 20px) scale(1); }
+  50% {
+    -webkit-transform: rotate(0) translate(0, 20px) scale(1);
+            transform: rotate(0) translate(0, 20px) scale(1); } }
+
+@keyframes show {
+  0%,
+  100% {
+    -webkit-transform: rotate(10deg) translate(10px, 25px) scale(0.7);
+            transform: rotate(10deg) translate(10px, 25px) scale(0.7);
+    z-index: 0; }
+  10%,
+  90% {
+    -webkit-transform: rotate(10deg) translate(10px, 25px) scale(0.7);
+            transform: rotate(10deg) translate(10px, 25px) scale(0.7);
+    z-index: 0; }
+  20%,
+  80% {
+    -webkit-transform: rotate(0) translate(20px, -80px) scale(0.7);
+            transform: rotate(0) translate(20px, -80px) scale(0.7);
+    z-index: 0; }
+  30%,
+  70% {
+    -webkit-transform: rotate(0) translate(0, -60px) scale(1);
+            transform: rotate(0) translate(0, -60px) scale(1);
+    z-index: 2; }
+  40%,
+  60% {
+    -webkit-transform: rotate(0) translate(0, 20px) scale(1);
+            transform: rotate(0) translate(0, 20px) scale(1); }
+  50% {
+    -webkit-transform: rotate(0) translate(0, 20px) scale(1);
+            transform: rotate(0) translate(0, 20px) scale(1); } }
+
 .education {
   padding: 90px 0;
   background-color: #efe8f5; }
@@ -1388,9 +1480,9 @@ body {
   display: inline-block;
   font-size: 0;
   line-height: 0;
-  -webkit-transform: rotate(10deg) translate(-10px, 25px);
-      -ms-transform: rotate(10deg) translate(-10px, 25px);
-          transform: rotate(10deg) translate(-10px, 25px);
+  -webkit-transform: rotate(10deg) translate(-10px, 25px) scale(0.7);
+      -ms-transform: rotate(10deg) translate(-10px, 25px) scale(0.7);
+          transform: rotate(10deg) translate(-10px, 25px) scale(0.7);
   -webkit-transform-origin: bottom left;
       -ms-transform-origin: bottom left;
           transform-origin: bottom left;
@@ -1398,14 +1490,12 @@ body {
   transition: -webkit-transform 0.3s;
   -o-transition: transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s; }
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-animation: show 4.5s ease-in-out 0s infinite;
+          animation: show 4.5s ease-in-out 0s infinite; }
   .education__certificate-link img {
     width: 160px;
     height: 224px; }
-  .education__certificate-link:hover {
-    -webkit-transform: rotate(0) translate(0);
-        -ms-transform: rotate(0) translate(0);
-            transform: rotate(0) translate(0); }
 
 .education__certificate-link-block {
   position: relative;
