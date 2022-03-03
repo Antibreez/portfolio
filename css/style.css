@@ -1319,40 +1319,6 @@ body {
   .btn-to-top:hover {
     cursor: pointer; }
 
-@-webkit-keyframes wave {
-  0%,
-  100% {
-    -webkit-transform: rotate(10deg) translate(-10px, 25px);
-            transform: rotate(10deg) translate(-10px, 25px); }
-  30%,
-  70% {
-    -webkit-transform: rotate(10deg) translate(-10px, 25px);
-            transform: rotate(10deg) translate(-10px, 25px); }
-  40%,
-  60% {
-    -webkit-transform: rotate(5deg) translate(-10px, 20px);
-            transform: rotate(5deg) translate(-10px, 20px); }
-  50% {
-    -webkit-transform: rotate(10deg) translate(-10px, 25px);
-            transform: rotate(10deg) translate(-10px, 25px); } }
-
-@keyframes wave {
-  0%,
-  100% {
-    -webkit-transform: rotate(10deg) translate(-10px, 25px);
-            transform: rotate(10deg) translate(-10px, 25px); }
-  30%,
-  70% {
-    -webkit-transform: rotate(10deg) translate(-10px, 25px);
-            transform: rotate(10deg) translate(-10px, 25px); }
-  40%,
-  60% {
-    -webkit-transform: rotate(5deg) translate(-10px, 20px);
-            transform: rotate(5deg) translate(-10px, 20px); }
-  50% {
-    -webkit-transform: rotate(10deg) translate(-10px, 25px);
-            transform: rotate(10deg) translate(-10px, 25px); } }
-
 @-webkit-keyframes show {
   0%,
   100% {
