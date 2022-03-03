@@ -1,23 +1,23 @@
-@keyframes wave {
-  0%,
-  100% {
-    transform: rotate(10deg) translate(-10px, 25px);
-  }
+// @keyframes wave {
+//   0%,
+//   100% {
+//     transform: rotate(10deg) translate(-10px, 25px);
+//   }
 
-  30%,
-  70% {
-    transform: rotate(10deg) translate(-10px, 25px);
-  }
+//   30%,
+//   70% {
+//     transform: rotate(10deg) translate(-10px, 25px);
+//   }
 
-  40%,
-  60% {
-    transform: rotate(5deg) translate(-10px, 20px);
-  }
+//   40%,
+//   60% {
+//     transform: rotate(5deg) translate(-10px, 20px);
+//   }
 
-  50% {
-    transform: rotate(10deg) translate(-10px, 25px);
-  }
-}
+//   50% {
+//     transform: rotate(10deg) translate(-10px, 25px);
+//   }
+// }
 
 @keyframes show {
   0%,
@@ -132,17 +132,12 @@
   transform: rotate(10deg) translate(-10px, 25px) scale(0.7);
   transform-origin: bottom left;
   transition: transform 0.3s;
-  //animation: wave 1.5s ease-in-out 0s infinite;
   animation: show 4.5s ease-in-out 0s infinite;
 
   img {
     width: 160px;
     height: 224px;
   }
-
-  // &:hover {
-  //   transform: rotate(0) translate(0);
-  // }
 }
 
 .education__certificate-link-block {
