@@ -2,6 +2,9 @@ let vh = window.innerHeight * 0.01;
 
 function onResize() {
   const dist = $(window).scrollTop();
+
+  console.log(dist);
+
   if (dist < 100) {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
