@@ -73,8 +73,12 @@
   0px 0px 92px rgba(0, 0, 0, 0.13)
 ;
     visibility: hidden;
-    z-index: -1;
-    animation-duration: 0.5s;
+    z-index: 4;
+    // animation-duration: 0.5s;
+    transform: translateY(100%);
+    transition-property: transform, visibility;
+    transition-duration: 0.5s, 0s;
+    transition-delay: 0s, 0.5s;
 
     @include tablet {
       left: 8px;
@@ -98,7 +102,8 @@
 
     &.is--opened {
       visibility: visible;
-      z-index: 4;
+      transform: translateY(0);
+      transition-delay: 0s;
       // top: 24px;
       // transition-delay: 0.2s;
     }
