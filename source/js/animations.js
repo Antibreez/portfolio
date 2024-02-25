@@ -116,10 +116,12 @@ $(window).on("load", function () {
   };
 
   lScroll.on("scroll", (args) => {
-    setBarStyles(args, "about-title-bar", 60, 25);
-    setBarStyles(args, "about-title-bar-long", 100, 55);
-    setBarStyles(args, "skills-title-bar", 60, 25);
-    setBarStyles(args, "skills-title-bar-long", 100, 55);
+    setBarStyles(args, "about-title-bar", 100, 55);
+    setBarStyles(args, "about-title-bar-long", 180, 110);
+    setBarStyles(args, "skills-title-bar", 100, 55);
+    setBarStyles(args, "skills-title-bar-long", 180, 110);
+    setBarStyles(args, "portfolio-title-bar", 100, 55);
+    setBarStyles(args, "portfolio-title-bar-long", 180, 110);
 
     let skillsImg = args.currentElements["skills-img"];
 

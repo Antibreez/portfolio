@@ -34,29 +34,9 @@
   mix-blend-mode: difference;
 }
 
-.about__title-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background-color: #000;
-  z-index: 2;
-}
-
-.about__title-bar-long {
-  position: absolute;
-  top: -30px;
-  left: 0;
-  height: 120%;
-  width: 0;
-  background-color: rgba(90, 24, 154, 1);
-  z-index: 1;
-}
-
 .about__text {
   margin: 0;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: $primary;

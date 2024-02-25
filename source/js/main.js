@@ -6,3 +6,4 @@ import "./portfolio";
 import "./menu";
 import "./preloader";
 import "./btn-to-top";
+import "./dc-web-slider";

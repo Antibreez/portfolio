@@ -1,0 +1,8 @@
+.c-scrollbar ~ .c-scrollbar {
+  z-index: 20;
+  opacity: 0;
+
+  &.is--scrollbar-visible {
+    opacity: 1;
+  }
+}
