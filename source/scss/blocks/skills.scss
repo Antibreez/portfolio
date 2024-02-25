@@ -92,6 +92,10 @@
 
 .skills__wrapper {
   width: 25%;
+
+  @include mobile {
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 .skills__subtitle {
@@ -164,6 +168,6 @@
   }
 
   .skills__bg-img-container {
-    min-width: 600px;
+    min-width: 400px;
   }
 }

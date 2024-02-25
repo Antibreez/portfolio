@@ -25,6 +25,13 @@
   }
 }
 
+//Разрешения
+@mixin tablet {
+  @media (max-width: ($tablet - 1px)) {
+    @content;
+  }
+}
+
 // Шрифты
 @mixin h1 {
   margin: 0;

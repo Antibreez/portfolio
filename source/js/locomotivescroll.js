@@ -5,7 +5,8 @@ const lScroll = new locomotiveScroll({
   smooth: true,
   lerp: 0.1,
   tablet: {
-    smooth: true,
+    breakpoint: 1024,
+    smooth: false,
   },
   smartphone: {
     smooth: false,
@@ -17,7 +18,8 @@ export const coScroll = new locomotiveScroll({
   smooth: true,
   lerp: 0.1,
   tablet: {
-    smooth: true,
+    breakpoint: 1024,
+    smooth: false,
   },
   smartphone: {
     smooth: false,
@@ -29,7 +31,8 @@ export const dcScroll = new locomotiveScroll({
   smooth: true,
   lerp: 0.1,
   tablet: {
-    smooth: true,
+    breakpoint: 1024,
+    smooth: false,
   },
   smartphone: {
     smooth: false,

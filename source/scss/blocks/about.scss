@@ -51,6 +51,16 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+
+  @include tablet {
+    height: 120%;
+    width: auto;
+    top: 0;
+
+    img {
+      height: 120%;
+    }
+  }
 }
 
 @include mobile {
@@ -73,8 +83,8 @@
     line-height: 22px;
   }
 
-  .about__img-block {
-    width: 100%;
-    top: -30px;
-  }
+  // .about__img-block {
+  //   width: 100%;
+  //   top: -30px;
+  // }
 }

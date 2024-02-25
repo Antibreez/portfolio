@@ -10,6 +10,7 @@ $item.on('click', function (e) {
 
     const $window = $(document).find(`[data-window='${name}']`)
     $window.addClass('is--opened');
+    $(window).outerWidth() < 1024 && $('body').addClass('js-no-scroll')
     $('.c-scrollbar').addClass('is--scrollbar-visible')
     $window.addClass('animate__animated animate__slideInUp');
     $('.modal-underlayer').addClass('is--visible');
@@ -60,6 +61,7 @@ $('.dc-web__wrapper').on('animationend', (e) => {
     dcScroll.scrollTo('top')
     coScroll.scrollTo('top')
     $(e.target).removeClass('is--opened')
+    $('body').removeClass('js-no-scroll')
   }
   $(e.target).removeClass('animate__animated animate__slideInUp animate__slideOutDown')
 })

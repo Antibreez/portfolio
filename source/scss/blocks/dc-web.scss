@@ -43,6 +43,11 @@
       height: 36px;
       color: $grey300;
       transition: color 0.3s;
+
+      @include tablet {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
@@ -71,6 +76,11 @@
     z-index: -1;
     animation-duration: 0.5s;
 
+    @include tablet {
+      left: 8px;
+      width: calc(100% - 16px);
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -80,11 +90,15 @@
       width: 100%;
       background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
       z-index: 2;
+
+      @include tablet {
+        z-index: 3;
+      }
     }
 
     &.is--opened {
       visibility: visible;
-      z-index: 2;
+      z-index: 4;
       // top: 24px;
       // transition-delay: 0.2s;
     }
@@ -92,6 +106,11 @@
 
   &__inner {
     background: #fff;
+
+    @include tablet {
+      overflow-y: auto;
+      height: 100%;
+    }
   }
 
   &__back {
@@ -122,12 +141,23 @@
     text-align: right;
     gap: 48px;
 
+    @include tablet {
+      flex-direction: column-reverse;
+      padding-bottom: 0;
+    }
+
     &-logo {
       text-align: left;
       margin-bottom: 16px;
       position: absolute;
       bottom: 100%;
       left: 0;
+
+      @include tablet {
+        width: 64px;
+        height: auto;
+        margin-bottom: 8px;
+      }
     }
 
     &-text {
@@ -136,6 +166,13 @@
       margin-left: auto;
       margin-right: 5%;
       position: relative;
+      z-index: 2;
+
+      @include tablet {
+        margin-right: 0;
+        max-width: none;
+        width: 100%;
+      }
     }
 
     &-image {
@@ -145,6 +182,12 @@
       padding: 16px;
       aspect-ratio: 1280 / 1030;
       margin-right: 5%;
+
+      @include tablet {
+        margin-right: 0;
+        width: 90%;
+        max-width: 400px;
+      }
 
       & > svg {
         width: 100%;
@@ -195,6 +238,11 @@
     margin: 0 0 8px;
     white-space: nowrap;
 
+    @include tablet {
+      text-align: left;
+      font-size: 24px;
+    }
+
     a {
       position: relative;
       color: $primary;
@@ -202,9 +250,18 @@
       align-items: center;
       gap: 24px;
 
+      @include tablet {
+        gap: 16px;
+      }
+
       svg {
         width: 36px;
         height: 36px;
+
+        @include tablet {
+          width: 24px;
+          height: 24px;
+        }
       }
 
       * {
@@ -224,6 +281,10 @@
         transition-delay: 0s, 0.2s;
         transition-property: opacity, width;
         z-index: 1;
+
+        @include tablet {
+          display: none;
+        }
       }
 
       &:hover {
@@ -253,6 +314,13 @@
     width: 45%;
     line-height: 150%;
     margin-bottom: 24px;
+
+    @include tablet {
+      position: relative;
+      z-index: 2;
+      font-size: 14px;
+      width: 100%;
+    }
   }
 
   &__list {
@@ -268,6 +336,10 @@
     padding: 36px 80px;
     position: relative;
 
+    @include tablet {
+      padding: 24px 0 0 0;
+    }
+
     & > svg {
       position: absolute;
       top: 0;
@@ -276,9 +348,19 @@
       height: 120px;
       color: $grey200;
       z-index: -1;
+
+      @include tablet {
+        width: 64px;
+        height: 64px;
+        z-index: 1;
+      }
     }
 
     &:nth-child(2n) {
+      @include tablet {
+        padding: 24px 0 0 0;
+      }
+
       & > svg {
         left: auto;
         right: 0;
@@ -287,6 +369,11 @@
       .dc-web__item-desc {
         margin-left: auto;
         text-align: right;
+
+        @include tablet {
+          padding-left: 0;
+          padding-right: 48px;
+        }
       }
     }
   }
@@ -296,6 +383,15 @@
     font-size: 16px;
     max-width: 40%;
     margin-bottom: 64px;
+
+    @include tablet {
+      position: relative;
+      z-index: 2;
+      max-width: none;
+      font-size: 12px;
+      padding-left: 48px;
+      margin-bottom: 36px;
+    }
   }
 
   &__item-slider-block {
@@ -317,6 +413,10 @@
     padding: 0;
     color: $grey400;
     transition: color 0.2s;
+
+    @include tablet {
+      display: none;
+    }
 
     svg {
       width: 48px;
@@ -357,6 +457,16 @@
       height: 100%;
       object-fit: cover;
       object-position: top center;
+    }
+  }
+
+  &__slider-pagination.swiper-pagination {
+    display: none;
+    bottom: -24px;
+    z-index: 2;
+
+    @include tablet {
+      display: block;
     }
   }
 }
